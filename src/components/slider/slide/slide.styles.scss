@@ -1,0 +1,130 @@
+.slide {
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  width: 90%;
+  padding: 10rem 14rem;
+
+  //   background-color: #e9f0f5;
+}
+
+.left-animation {
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.right-animation {
+  animation-name: moveInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.non-active {
+  display: none;
+  max-width: 900px;
+  text-align: center;
+}
+
+.product_info {
+  display: flex;
+  width: 60rem;
+  padding-right: 12rem;
+  flex-direction: column;
+}
+
+.sell_data {
+  display: flex;
+  width: 36rem;
+  padding-top: 4.5rem;
+  justify-content: space-between;
+
+  .product_price {
+    font-size: 3.6rem;
+    color: #e40047;
+  }
+
+  .delivery {
+    font-family: "Montserrat", sans-serif;
+    color: #9dabb4;
+    font-size: 1.2rem;
+  }
+}
+
+.product_title {
+  font-size: 10rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 550;
+  letter-spacing: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.product_description {
+  font-size: 1.6rem;
+
+  line-height: 2.4rem;
+  font-family: "Montserrat", sans-serif;
+  color: #9dabb4;
+}
+
+// @media only screen and (max-width: )
+@media only screen and (max-width: 56.25em) {
+  .slide {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    padding-top: 2rem;
+    align-items: center;
+    align-content: center;
+
+    //   background-color: #e9f0f5;
+  }
+
+  .product_info {
+    order: 2;
+    padding-right: 0;
+    padding-top: 2rem;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .product_info {
+    margin-left: 10rem;
+    width: 100%;
+    padding: 0;
+    .sell_data {
+      width: 100%;
+    }
+  }
+}
